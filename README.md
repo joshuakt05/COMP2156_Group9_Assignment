@@ -1,1 +1,16 @@
-# COMP2156_Group9_Assignment
+# COMP2156 Group Assignment - GP9
+
+Members:
+
+Joshua Tran (repo owner)
+branch: 101551521-Josh
+
+Emmanuel Valencia
+branch:
+
+Nathaniel Coole
+branch:
+
+Remy Smith
+branch:
+
