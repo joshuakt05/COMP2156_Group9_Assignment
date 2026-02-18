@@ -1,1 +1,2 @@
 DevOps helps automate the software development cycle and reduces manual deployment errors
+DevOps ensures faster detection of bugs during deployment
