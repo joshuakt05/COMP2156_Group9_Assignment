@@ -1,0 +1,1 @@
+DevOps helps automate the software development cycle and reduces manual deployment errors
