@@ -1,0 +1,4 @@
+Software Development Life Cycle
+
+Structured and seven-phased framework.
+Planning, Analysis, Design, Development, Testing, Deployment, Maintenance
