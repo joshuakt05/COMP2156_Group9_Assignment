@@ -1,0 +1,67 @@
+name: CI - Assignment Validation
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout (full history for commit counts)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Branch naming convention (STUDENTID-Name)
+        if: ${{ github.event_name == 'push' && github.ref_name != 'main' }}
+        shell: bash
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          if [[ ! "$BRANCH" =~ ^[0-9]+-[A-Za-z].* ]]; then
+            echo "❌ Invalid branch name: $BRANCH"
+            echo "Expected: STUDENTID-Name (e.g., 100929449-RemySmith)"
+            exit 1
+          fi
+          echo "✅ Branch name OK: $BRANCH"
+
+      - name: Check Remy Smith required files exist and are non-empty
+        shell: bash
+        run: |
+          set -euo pipefail
+          REQUIRED=(
+            "100929449_gb.txt"
+            "100929449_devops.txt"
+            "100929449_sdlc.txt"
+          )
+          for f in "${REQUIRED[@]}"; do
+            if [[ ! -f "$f" ]]; then
+              echo "❌ Missing required file: $f"
+              exit 1
+            fi
+            if [[ ! -s "$f" ]]; then
+              echo "❌ File exists but is empty: $f"
+              exit 1
+            fi
+            echo "✅ Found non-empty: $f"
+          done
+
+      - name: Commit count check (>=10 commits ahead of main)
+        if: ${{ github.event_name == 'push' && github.ref_name != 'main' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --prune
+          AHEAD=$(git rev-list --count "origin/main..HEAD")
+          echo "Commits ahead of origin/main: $AHEAD"
+          if (( AHEAD < 10 )); then
+            echo "❌ Branch is only $AHEAD commits ahead of main (expected >= 10)."
+            exit 1
+          fi
+          echo "✅ Commit count OK."
