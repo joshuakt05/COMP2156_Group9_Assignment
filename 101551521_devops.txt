@@ -1,0 +1,9 @@
+This course teaches the procedures, protocols, and best practices that a DevOps engineer brings to a workplace enviroment to increase productivity.
+
+Extensible Markup Language (XML)
+JavaScript Object Notation (JSON)
+Yaml Ain't Markup Language (YAML)
+Yet Another Next Generation (YANG)
+
+Ansible
+Git
