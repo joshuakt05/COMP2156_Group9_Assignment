@@ -1,0 +1,11 @@
+Software Development Life Cycle
+
+Structured and seven-phased framework.
+
+Planning: Identifies project goals, budget, timeline, and resources
+Analysis: Collect user needs and requirements
+Design: Create system, interface, program structure, database
+Development: Coding
+Testing: Bugfixes, optimization, add user requests, testing
+Deployment: Release to live environment
+Maintenance: Bugfixes, updates, adjusting post launch

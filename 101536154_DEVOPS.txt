@@ -1,0 +1,5 @@
+Course: COMP 2156
+
+Description: Students learn the procedures, protocols, and best practices for a DevOps engineer to be productive in the workplace. Students will have hands on experience with the industry standard toolkit and learn about data types and formats like XML, JSON, YAML, YANG. Students will also work with tools like Ansible and Git.
+
+Outcome: Student displays skilled use of industry standard toolkit and understanding of the different data types and formats.
