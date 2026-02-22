@@ -1,1 +1,2 @@
 The SDLC defines structured phases for software creation and maintenance.
+Agile methodology emphasizes iterative and incremental delivery.
