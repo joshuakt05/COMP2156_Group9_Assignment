@@ -1,0 +1,1 @@
+Continuous Integration automatically tests code after each push.
