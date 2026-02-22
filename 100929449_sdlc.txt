@@ -1,0 +1,1 @@
+The SDLC defines structured phases for software creation and maintenance.
