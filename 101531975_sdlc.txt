@@ -1,0 +1,3 @@
+DevOps helps automate the software development cycle and reduces manual deployment errors
+DevOps ensures faster detection of bugs during deployment
+Learning devops helps developers understand real-wrold production enviroments
