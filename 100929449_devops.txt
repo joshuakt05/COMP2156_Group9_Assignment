@@ -1,1 +1,2 @@
 Continuous Integration automatically tests code after each push.
+Continuous Deployment automates releasing changes to production.
